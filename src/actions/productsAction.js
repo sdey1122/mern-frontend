@@ -5,7 +5,9 @@ export const getProductById = (productId) => {
   return async (dispatch) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`/api/products/${productId}`, {
+      const response = await axios.get(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/products/${productId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -32,7 +34,9 @@ export const startGetProducts = () => {
   return (dispatch) => {
     const token = localStorage.getItem("token");
     axios
-      .get("/api/products", {
+      .get("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/products", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -57,7 +61,9 @@ export const setProducts = (products) => {
 export const startCreateProduct = (productData, suppId, redirect) => {
   return (dispatch) => {
     axios
-      .post(`/api/products`, productData, {
+      .post(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/products`, productData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",
@@ -115,7 +121,9 @@ export const handleError = (error) => {
 export const startEditProduct = (editedData, productId, closeModal) => {
   return (dispatch) => {
     axios
-      .put(`/api/products/${productId}`, editedData, {
+      .put(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/products/${productId}`, editedData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
@@ -157,7 +165,9 @@ export const startDeleteProduct = (productId) => {
     dispatch({ type: "REMOVE_PRODUCT_REQUEST" });
 
     axios
-      .delete(`/api/products/${productId}`, {
+      .delete(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/products/${productId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
