@@ -15,7 +15,9 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("/pics/shop2.jpg") center/cover no-repeat;
+    url("https://mern-ecommerce-app-orr2.onrender.com
+
+/pics/shop2.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
