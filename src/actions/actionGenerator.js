@@ -5,7 +5,9 @@ import Swal from "sweetalert2";
 export const startsupplierLogin = (formData, redirect) => {
   return (dispatch) => {
     axios
-      .post("/api/auth/login", formData)
+      .post("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/auth/login", formData)
       .then((response) => {
         const result = response.data;
         const decodedToken = jwt_decode(result.token);
@@ -44,7 +46,9 @@ export const supplierLoginedIn = () => {
 export const startGetSupplierAccountDetails = (id) => {
   return (dispatch) => {
     axios
-      .get(`/api/admin/${id}`, {
+      .get(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/admin/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -78,7 +82,9 @@ let registrationCount = 0;
 export const startSupplierRegister = (formData, redirect) => {
   return (dispatch) => {
     axios
-      .post("/api/auth/register", formData)
+      .post("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/auth/register", formData)
       .then((response) => {
         registrationCount++;
         const accountType = registrationCount === 1 ? "Admin" : "User";
@@ -107,7 +113,9 @@ export const startSupplierRegister = (formData, redirect) => {
 export const startSupplierAccountEdit = (id, formData, handleClose) => {
   return (dispatch) => {
     axios
-      .put(`/api/admin/${id}`, formData, {
+      .put(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/admin/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -139,7 +147,9 @@ export const supplierEditedAccount = (data) => {
 export const stateAddAddress = (formData) => {
   return (dispatch) => {
     axios
-      .post("/api/address/register", formData)
+      .post("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/address/register", formData)
       .then((Response) => {
         const data = Response.data;
         if (data.hasOwnProperty("errors")) {
@@ -176,7 +186,9 @@ export const setAddAddressError = (error) => {
 export const stateAllAddresses = () => {
   return (dispatch) => {
     axios
-      .get("/api/address")
+      .get("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/address")
       .then((Response) => {
         const data = Response.data;
         dispatch(setAllAddresses(data));
@@ -195,7 +207,9 @@ export const setAllAddresses = (data) => {
 export const stateDeleteAddress = (id) => {
   return (dispatch) => {
     axios
-      .delete(`/api/address/${id}`)
+      .delete(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/address/${id}`)
       .then((Response) => {
         const data = Response.data;
         dispatch(setDeleteAddress(data));
