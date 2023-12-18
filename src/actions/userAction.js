@@ -7,7 +7,9 @@ let registrationCount = 0;
 export const startRegisterUser = (formData, redirect) => {
   return (dispatch) => {
     axios
-      .post("/api/auth/register", formData)
+      .post("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/auth/register", formData)
       .then((res) => {
         const result = res.data;
         if (result.hasOwnProperty("errors")) {
@@ -41,7 +43,9 @@ export const startRegisterUser = (formData, redirect) => {
 export const startUserLogin = (loginData, redirect) => {
   return (dispatch) => {
     axios
-      .post("/api/auth/login", loginData)
+      .post("https://mern-ecommerce-app-orr2.onrender.com
+
+/api/auth/login", loginData)
       .then((res) => {
         const result = res.data;
         if (result.hasOwnProperty("errors")) {
@@ -122,7 +126,9 @@ export const userLoggedIn = () => {
 export const startGetUserAccountDetails = (id) => {
   return (dispatch) => {
     axios
-      .get(`/api/users/${id}`, {
+      .get(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -153,7 +159,9 @@ export const userLoginInfo = (result) => {
 export const startEditUserAccount = (id, formData, handleClose) => {
   return (dispatch) => {
     axios
-      .put(`/api/users/${id}`, formData, {
+      .put(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/users/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
