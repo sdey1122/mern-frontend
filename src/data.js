@@ -1,7 +1,9 @@
 export const sliderData = [
   {
     id: 1,
-    img: "pics/cart1.jpg",
+    img: "https://mern-ecommerce-app-orr2.onrender.com
+
+/pics/cart1.jpg",
     title: "SUMMER SALE",
     description:
       "Discover sizzling summer savings with unbeatable discounts on your favorite products. Beat the heat and shop now!",
@@ -9,7 +11,9 @@ export const sliderData = [
   },
   {
     id: 2,
-    img: "pics/cart4.jpg",
+    img: "https://mern-ecommerce-app-orr2.onrender.com
+
+/pics/cart4.jpg",
     title: "GADGETS SALE",
     description:
       "Elevate your tech game with our exclusive gadget sale. Explore a world of cutting-edge technology at irresistible prices.",
@@ -17,7 +21,9 @@ export const sliderData = [
   },
   {
     id: 3,
-    img: "pics/cat3.jpg",
+    img: "https://mern-ecommerce-app-orr2.onrender.com
+
+/pics/cat3.jpg",
     title: "POPULAR TREND",
     description:
       "Stay chic and stylish with our hottest trends collection. Discover the latest fashion choices and upgrade your wardrobe today!",
