@@ -2,7 +2,9 @@ import axios from "axios"
 
 export const startGetCart = (userId) => {
     return (dispatch) => {
-        axios.get(`/api/cart/${userId}`, {
+        axios.get(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/cart/${userId}`, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem('token')}`
             }
@@ -26,7 +28,9 @@ export const setCart = (cartItems) => {
 
 export const startAddToCart = (cartBody, productId) => {
     return (dispatch) => {
-        axios.post(`/api/cart`, cartBody, {
+        axios.post(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/cart`, cartBody, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem('token')}`
             }
@@ -51,7 +55,9 @@ export const addCart = (cartItem) => {
 export const startDeleteCart = (userId, productId) => {
     return async (dispatch) => {
         try {
-            const { data: updatedCart } = await axios.delete(`/api/cart/${userId}/${productId}`, {
+            const { data: updatedCart } = await axios.delete(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/cart/${userId}/${productId}`, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
@@ -66,7 +72,9 @@ export const startDeleteCart = (userId, productId) => {
 export const startDeleteAllProductsFromCart = (userId) => {
     return async (dispatch) => {
         try {
-            await axios.delete(`/api/cart/${userId}`, {
+            await axios.delete(`https://mern-ecommerce-app-orr2.onrender.com
+
+/api/cart/${userId}`, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem('token')}`
                 }
